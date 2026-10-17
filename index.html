@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StayEase | Hotel Booking</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">S</span> StayEase</a>
+    <nav><a href="#hotels">Explore hotels</a><a href="#how">How it works</a></nav>
+    <button class="outline-btn" id="myBookingsBtn">My bookings <span id="bookingCount">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">YOUR NEXT STAY STARTS HERE</span>
+        <h1>Find a place<br />to <em>feel at home.</em></h1>
+        <p>Discover welcoming stays, compare room options, and plan your next getaway with ease.</p>
+        <div class="trust-row"><span>★ 4.8/5 guest rating</span><span>✓ Handpicked stays</span></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a hotel">
+        <div class="sun"></div><div class="cloud cloud-one"></div><div class="cloud cloud-two"></div>
+        <div class="hotel-building"><div class="roof"></div><div class="building-face">
+          <div class="hotel-sign">STAYEASE</div>
+          <div class="window-grid"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="door"></div>
+        </div></div>
+        <div class="plant plant-left">♣</div><div class="plant plant-right">♣</div>
+      </div>
+      <form class="search-panel" id="searchForm">
+        <label><span>DESTINATION</span><input id="destination" placeholder="City or hotel name" /></label>
+        <label><span>CHECK-IN</span><input id="checkin" type="date" required /></label>
+        <label><span>CHECK-OUT</span><input id="checkout" type="date" required /></label>
+        <label><span>GUESTS</span><select id="guests"><option>1 guest</option><option selected>2 guests</option><option>3 guests</option><option>4 guests</option><option>5+ guests</option></select></label>
+        <button class="primary-btn" type="submit">Search stays <span>→</span></button>
+      </form>
+    </section>
+
+    <section class="section" id="hotels">
+      <div class="section-heading">
+        <div><span class="eyebrow">CURATED FOR YOU</span><h2>Popular stays</h2><p>Comfortable places for every kind of trip.</p></div>
+        <div class="filters"><button class="filter active" data-filter="All">All stays</button><button class="filter" data-filter="Beach">Beach</button><button class="filter" data-filter="City">City</button><button class="filter" data-filter="Nature">Nature</button></div>
+      </div>
+      <div class="results-note" id="resultsNote">Showing 6 handpicked stays</div>
+      <div class="hotel-grid" id="hotelGrid"></div>
+    </section>
+
+    <section class="how-section" id="how">
+      <span class="eyebrow">SIMPLE BY DESIGN</span><h2>Your stay, sorted in three steps.</h2>
+      <div class="steps">
+        <article><span>01</span><h3>Find your fit</h3><p>Search by destination, dates, and guests to explore suitable stays.</p></article>
+        <article><span>02</span><h3>Compare options</h3><p>Review highlights, guest ratings, and nightly prices before choosing.</p></article>
+        <article><span>03</span><h3>Book with ease</h3><p>Confirm your details and see your booking saved on this device.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-mark">S</span> StayEase</a><span>Demo hotel booking app · Sample listings only</span></footer>
+
+  <dialog id="bookingDialog">
+    <div class="dialog-head"><div><span class="eyebrow">RESERVE YOUR STAY</span><h2 id="dialogTitle">Complete your booking</h2></div><button class="close-btn" id="closeDialog" aria-label="Close">×</button></div>
+    <div id="dialogContent"></div>
+  </dialog>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
